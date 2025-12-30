@@ -1,0 +1,9 @@
+{
+  "name": "Python DHIS2 App",
+  "description": "DHIS2 app using Python backend",
+  "version": "1.0.0",
+  "launch_path": "index.html",
+  "icons": {
+    "48": "image.png"
+  }
+}

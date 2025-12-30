@@ -1,0 +1,122 @@
+<head>
+<style>
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+        background: #f3f5f7;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-weight: 500;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 4px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    }
+
+    button {
+        background: #1f7ae0;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 14px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    button:hover {
+        background: #1669c1;
+    }
+
+    button.secondary {
+        background: #e0e0e0;
+        color: #333;
+    }
+
+	button:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+	
+	button.danger {
+		background: transparent;
+		border: none;
+		color: #d32f2f;           /* DHIS2 red */
+		font-weight: 500;
+		cursor: pointer;
+		padding: 6px 8px;
+	}
+	
+	
+    pre {
+        background: #111;
+        color: #dcdcdc;
+        padding: 12px;
+        border-radius: 4px;
+        height: 280px;
+        overflow-y: auto;
+        font-family: Consolas, monospace;
+        font-size: 12px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 4px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .status {
+        font-weight: 600;
+    }
+
+    .SUCCESS {
+        color: #2e7d32;
+    }
+
+    .FAILED {
+        color: #c62828;
+    }
+
+    .RUNNING {
+        color: #f9a825;
+    }
+</style>
+
+</head>
+
+
+
+
+<div class="card">
+    <h3>Run Python Job</h3>
+    <!--<button id="runBtn">Run Job</button>-->
+	<button id="runBtn" onclick="startJob()">Run Job</button>
+</div>
+
+<div class="card">
+    <h3>Live Logs</h3>
+    <pre id="logs"></pre>
+</div>
+
+<div class="card">
+    <h3>Job History</h3>
+    <ul id="history"></ul>
+</div>
+
+<script src="app.js"></script>
+
