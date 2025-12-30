@@ -1,0 +1,13 @@
+.page {
+    padding: 20px;
+}
+
+.logs {
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 12px;
+}
