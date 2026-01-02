@@ -53,11 +53,15 @@ function runJob() {
 }
 */
 
+
 function runJob() {
 	let statusTimer = null;
 
     runBtn.disabled = true;
     runBtn.textContent = "Starting...";
+	
+	 // ✅ clear UI logs
+    logsDiv.innerHTML = "";
 
     fetch(API_BASE + "/run", { method: "POST" })
         .then(r => r.json())
@@ -73,6 +77,25 @@ function runJob() {
             runBtn.textContent = "Run Aggregation";
         });
 }
+
+
+/*
+function runJob() {
+	
+    runBtn.disabled = true;
+    runBtn.textContent = "Starting...";
+
+    // ✅ clear UI logs
+    logsDiv.innerHTML = "";
+
+    fetch(API_BASE + "/run", { method: "POST" })
+        .then(() => {
+            if (!statusTimer) {
+                statusTimer = setInterval(updateStatus, 2000);
+            }
+        });
+}
+*/
 
 
 function fetchLogs() {
